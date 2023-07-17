@@ -1,0 +1,31 @@
+--Create a car store database
+Create Table Store (Id integer primary key,Name text,price integer,color text, popularity integer);
+
+Insert into store values
+(1,"Bike",2000,"Red",3),
+(2,"Bike",2500,"Green",5),
+(3,"Bike",3000,"Purple",15),
+(4,"Bike",1000,"Blue",10),
+(5,"Car",33000,"Grey",2),
+(6,"Car",10000,"Silver",12),
+(7,"Car",12000,"Blue",11),
+(8,"Car",10000,"Red",6),
+(9,"Car",8000,"Green",1),
+(10,"Truck",20000,"Silver",4),
+(11,"Truck",20000,"Green",7),
+(12,"Truck",10000,"Yellow",13),
+(13,"Truck",30000,"Tan",14),
+(14,"Truck",22000,"Blue",8),
+(15,"Truck",10000,"Black",9);
+
+-- Have full list of items displayed
+SELECT * FROM Store;
+
+--Add all prices of items from store
+Select sum(price) from store;
+
+--View items that cost 10000 or more
+Select * from store where price >= 10000 order by price desc;
+
+--View Items ranked by popularity
+Select * from store order by popularity;
